@@ -1,0 +1,39 @@
+<?php
+header("content-type:text/html;charset=utf-8");
+/*将对象当做字符串输出，并输出各种信息*/
+class Dog{
+    public $name;
+    protected $age;
+    private $lover;
+    //定义构造函数
+    public function __construct($name,$age,$lover){
+        $this->name=$name;
+        $this->age=$age;
+        $this->lover=$lover;
+    }
+    protected function cry(){
+        echo '汪汪叫';
+    }//调用魔术方法__toString():只有在直接使用于 echo  或 print  时才能生效
+    public function __toString(){//
+        $reflect_class=new ReflectionClass($this);//建立该类的反射类
+        /*默认情况下，ReflectionClass会获取到所有的属性，protected与private的
+        属性也可以获得到*/
+        echo'<pre>';
+      var_dump($reflect_class);
+        echo'<br> 类名='.$reflect_class->getName();
+      echo '<br> 类的方法有';
+        $method_list=$reflect_class->getMethods();//获取到所有的methods
+        print_r($method_list);
+        echo '<br>类的属性有';
+        $property_list=$reflect_class->getProperties();
+        print_r($property_list);
+        //取出大黄狗
+       echo'<br>' .$property_list[0]->getProperties();
+        //函数列表
+        return '';
+    }
+}
+$dog=new Dog('大黄狗',5,'小花狗');
+////需要这里输出Dog类的相关信息，函数，属性，类名
+echo'<pre>';
+print_r($dog);

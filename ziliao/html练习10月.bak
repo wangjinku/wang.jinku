@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<!--开头-->
+<meta charset="utf-8"/>
+<!--指定文档格式-->
+<title>页码下缀</title>
+<link type="text/css"    href="./css/index.css"/>
+      <!--相对路径-->
+   <style>
+   h3{ background:red;
+   color:yellow
+  }
+  </style>
+</head>
+<body bgcolor="green">
+<!--正文，背景颜色 绿色 -->
+<h3>空格&nbsp;回车<br/></h3>
+<h3 align="center">的正文</h3>
+<!--排成一排，中央-->
+<h1 align="center">正文第一行</h1>
+<h2 align="center" >第二个标题<br/>第三个标题 </h2>
+<!--h为标题正文居中-->
+<h2 align="center">
+上标：金库<sup>15516537579</sup>
+<br/>
+3<sup>2</sup>+2<sup>2</sup>=13
+</h2>
+</table>
+<table border=”5px” align="center">
+<caption align="left">表格</caption>
+<tr><th colspan="2">1</th><th>2</th></tr>
+<!--第一个单元格横向合并2个-->
+<tr><td rowspan="2">一</td><td>三</td><td>六</td></tr>
+<!--第一个单元格纵向合并-->
+<tr><td>四</td><td>七</td></tr>
+<tr><td>二</td><td>五</td><td>八</td></tr>
+</table>
+<a href="school.dev.com">超链接</a>
+<!--a是放在超链接里的。属于闭合标签-->
+</body>
+<body style="font-family:楷体; color:red; font-size:25px">
+<!--加字体，颜色，文字大小-->
+<ul type="square">
+<!--list-style-type：定义列表项符号；disc:默认值，实心圆；circle：空心圆； square：实心正方形-->
+    <li>奔跑吧，兄弟</li>
+	<li>奔跑吧，兄弟</li>
+	<li>奔跑吧，兄弟</li>
+  </ul>
+   <!--以上为无序列表，以下为有序列表-->
+   <ol type="A" start="5">
+ <li>奔跑吧兄弟</li>
+	<li>奔跑吧兄弟</li>
+	<li>奔跑吧兄弟</li>
+	</ol>
+<font face=”宋体” color=”red” size=”54px”>字体颜色和大小</font>
+<!--标签 字体颜色和大小-->
+<img src=C:\Users\kona001\Desktop\img\5.png alt=5.zhu>
+<!--插入图片，图片地址。Alt=”提示错误，对不显示的图片进行说明”
+ -->
+ <tr>
+<td>爱好</td>
+<td>
+<input type="checkbox" name="aihao"/>运动
+<input type="checkbox" name="aihao"/>聊天
+<input type="checkbox" name="aihao"/>游戏
+</td>
+</tr>
+</tr><input type="submit" name="da an"/ ></tr>
+<!-提交按钮-->
+<tr><input type="reset" name="da a"/ ></tr>
+</body>
+</html>
