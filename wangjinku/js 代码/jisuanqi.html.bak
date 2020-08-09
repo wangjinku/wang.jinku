@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>课堂练习</title>
+<script type="text/javascript">
+
+function js(){
+	var first =document.getElementById('first').value;
+	var second =document.getElementById('second').value;
+	var yunsuan =document.getElementById('yunsuan').value;
+
+	var res='';
+
+	switch(yunsuan){
+		case'+':
+			res=parseInt(first) + parseInt(second);
+		break;
+		case'-':
+			res=first - second;
+		break;
+		case'*':
+			res=first * second;
+		break;
+		default:
+			res=first / second;
+	}
+	var result=document.getElementById('result');
+	result.value=res;
+	alert("确定要查看结果吗？");
+}
+</script>
+</head>
+<body>
+	<table border="1px" line-height="10px" width="400px" bordercolor="red" bgcolor="#ffe4c4" color="red" >
+	<tr>
+		<td>参数1<input type='text' id='first'></td>
+		<td>
+			<select name='yunsuan' id='yunsuan'>
+				<option value='+'>+</option>
+				<option value='-'>-</option>
+				<option value='*'>*</option>
+				<option value='/'>/</option>
+			</select>
+		</td>
+		<td>参数2<input type='text' id='second'></td>
+		<td>=</td>
+		<td>运算结果<input type='text' id='result'></td>
+		<td><input type='button' value='计算' onclick='js()'></td>
+	</tr>
+	</table>
+ </body>
+ </html>

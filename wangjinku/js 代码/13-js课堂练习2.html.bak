@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title> 练习2 </title>
+  <script type="text/javascript">
+	/*
+	2. 手掌游戏机一台X元，mp3一台Y元。(X,Y由用户输入)
+公司举行抽奖大会，一等奖游戏机5台，二等奖mp3  13台。
+公司共有30人。问总价为多少，公司实际平均给每人花费了多少钱。
+
+	*/
+	var x = window.prompt("请输入游戏机的价格");
+	var y = window.prompt("请输入mp3的价格");
+	
+	//gamer_num游戏机的数量
+	var gamer_num = 5;
+	//mp3的数量
+	var mp3_num = 13;
+	var person_num = 30;
+
+	var total_money = gamer_num * x + mp3_num * y;
+	document.write("总价格是 = " + total_money);
+	var averge_fee = total_money / person_num;
+	//把averge_fee 的值调整到小数点后两位,然后重新赋值给 averge_fee;
+	averge_fee = averge_fee.toFixed(2);
+	document.write("<br>平均每个人的费用是" + averge_fee);
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>
